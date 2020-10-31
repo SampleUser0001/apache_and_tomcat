@@ -5,6 +5,7 @@ RUN yum -y install httpd httpd-devel gcc* make && yum clean all
 
 # mod_jk conf files
 ADD httpd-proxy.conf /etc/httpd/conf.d/
+ADD conf/httpd.conf /etc/httpd/conf/httpd.conf
 
 # Simple startup script to avoid some issues observed with container restart 
 ADD run-httpd.sh /run-httpd.sh
